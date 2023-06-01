@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro dos emails enviados</title>
+    <link rel="shortcut icon" href="../image/icon.png" type="image/x-icon" /> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../css/emails.css">
+
+</head>
+<body>
+    <header>
+        <a href="../../home.html">
+            <img class="logo-img" src="../image/logo.png" alt="logo">
+        </a>
+        <nav class="navigation">
+          <a href="envio.html">Enviar</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </header>
+      <h1>Registro de Campanhas</h1>
+      <section class="envio">
+        <form class="regs" method="POST" action="../php/emails.php">
+            <div class="form-group">
+                <label for="nome" class="name-campanha">Nome para os emails:</label>
+                <input type="text" class="form-control" name="nome" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="data" class="date">Data:</label>
+                <input type="date" class="form-control" name="data" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email" class="mail">Quantidade enviada:</label>
+                <input type="text" class="form-control" name="email" required>
+            </div>
+    
+            <input type="submit" value="Registrar emails" class="btn btn-primary">
+            <a href="../../home.html" class="btn btn-secondary">Voltar a tela principal</a>
+        </form>
+    
+    </section>
+    <h2>Emails Registradas:</h2>
+    <table class="table">
+        <thead>
+            <tr class="tabela">
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Emails enviados</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                <tr>
+                    <td><?php echo $row["nome"]; ?></td>
+                    <td><?php echo $row["data"]; ?></td>
+                    <td class="td-mail"><?php echo $row["email"]; ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+       
+    
+    
+
+
+        <footer></footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="../php/emails.php"></script>
+    </body>
+</html>

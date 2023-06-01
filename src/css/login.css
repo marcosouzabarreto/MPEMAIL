@@ -1,0 +1,118 @@
+@import url('https //fonts.googleapis.com/css2 family=poppins &display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background-image: linear-gradient(to bottom, rgb(201, 200, 200), rgb(168, 168, 168));
+  box-shadow: 0px 0px 10px rgba(3, 1, 1, 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  height: 60px;
+}
+
+.logo-img{
+  width: 9vh;
+}
+
+.navigation a{
+  position: relative;
+  font-size: 1.1em;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navigation a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #242522;
+  border-radius: 5px;
+  left: 0;
+  bottom: -6px;
+  transform-origin:right ;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+.navigation a:hover::after{
+  transform-origin:left;
+  transform: scaleX(1);
+}
+
+:root {
+    --overstack: #03751f;
+    --overstack-light-hover: #53eb2e;
+    --color-gradient: linear-gradient(
+      155.34deg,
+      var(--overstack) 30.41%,
+      var(--overstack-light-hover) 100%
+    );
+  }
+  
+.content{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 120px;
+  }
+
+.regs input{
+    width: 350px;
+    height: 35px;
+    border: 0;
+    margin: 10px 0;
+    border-bottom: 1px solid black;
+    font-size: 22px;
+}
+
+.regs input:focus {
+    outline: 0;
+  }
+
+.regs{
+    width: 100%;
+}
+
+.buttonRegs {
+    width: 90px;
+    height: 40px;
+    background: var(--color-gradient);
+    font-size: 18px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+  }
+  
+.buttonRegs:hover {
+    filter: brightness(0.9);
+  }

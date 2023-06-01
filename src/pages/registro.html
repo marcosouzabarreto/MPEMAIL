@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../image/icon.png" type="image/x-icon" /> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+
+    <title>Login</title>
+</head>
+<body>   
+      <form class="regs" method="POST" action="../php/login.php">
+        <div
+          class="container"
+          style="margin-top: 75px; font-family: Bradley Hand, cursive"
+        ></div>
+        <div
+          class="content bg-light rounded-3 border shadow p-3 mb-5 bg-body rounded"
+          style="width: 400px; height: 450px"
+        >
+          <a href="../../home.html"><img class="logo mb-4" src="../image/logo.png" alt="Logo" /></a>
+          <a>Preencha o Formulário </a> 
+          <span class="feedback"></span>
+          <input type="text" name="name" placeholder="Nome" />
+          <input type="text" name="email" placeholder="E-mail" />
+          <input type="password" name="password" placeholder="Senha" />
+          <button class="buttonRegs" id="button-Regs">Login</button>
+          <p class="text-center mt-2">
+            Já possui cadastro? <a href="login.html">clique aqui</a>
+          </p>
+        </div>
+      </form>
+
+      <script src="../php/login.php"></script>
+</body>
+</html>
